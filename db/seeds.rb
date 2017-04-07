@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+User.delete_all
 Subject.delete_all
 Page.delete_all
 Section.delete_all
@@ -21,3 +21,6 @@ puts 'all destroyed'
   section1 = Section.create(page_id:1, name:'sekcja1')
   section2 = Section.create(page_id:2, name:'sekcja2')
   puts 'create sections'
+
+  user1 = User.create(name: 'Jakub', last_name: 'C', email: 'jakub023@gmail.com',username: 'jack0327',hashed_password: '1324')
+  puts 'create users'
