@@ -1,8 +1,9 @@
 class Page < ApplicationRecord
 
 
-  belongs_to :subject
+  belongs_to :subject  #belongs_to = foreing key
 
-   #page ma foreing key
+
+
 
 end
