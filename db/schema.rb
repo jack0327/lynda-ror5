@@ -30,12 +30,11 @@ ActiveRecord::Schema.define(version: 20170410064810) do
   end
 
   create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "subject_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "description"
     t.string   "name"
     t.integer  "position"
+    t.string   "description"
   end
 
   create_table "section_edits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -56,7 +55,7 @@ ActiveRecord::Schema.define(version: 20170410064810) do
   end
 
   create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"+
+    t.string   "name"
     t.string   "last_name"
     t.string   "email"
     t.boolean  "visible",    default: true
