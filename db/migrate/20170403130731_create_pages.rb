@@ -5,6 +5,7 @@ class CreatePages < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :position
       t.string :description
+      t.integer "subject_id", :default =>1
     end
   end
 end

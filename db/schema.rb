@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410064810) do
+ActiveRecord::Schema.define(version: 20170421102246) do
 
   create_table "admin_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",            limit: 25
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20170410064810) do
     t.string   "name"
     t.integer  "position"
     t.string   "description"
+    t.integer  "subject_id"
   end
 
   create_table "section_edits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -61,6 +62,7 @@ ActiveRecord::Schema.define(version: 20170410064810) do
     t.boolean  "visible",    default: true
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "position",   default: 1
   end
 
 end
